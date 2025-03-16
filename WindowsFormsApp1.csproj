@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE3A0CCE-0857-4956-BE16-2C80C5200C1D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WindowsFormsApp1.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\LavadoVehiculoController.cs" />
+    <Compile Include="Model\LavadoVehiculoModel.cs" />
+    <Compile Include="view\conexion.cs" />
+    <Compile Include="view\lavado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\lavado.Designer.cs">
+      <DependentUpon>lavado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\parqueadero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\parqueadero.Designer.cs">
+      <DependentUpon>parqueadero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\verlavado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\verlavado.Designer.cs">
+      <DependentUpon>verlavado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\verparquea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\verparquea.Designer.cs">
+      <DependentUpon>verparquea.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\lavado.resx">
+      <DependentUpon>lavado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\parqueadero.resx">
+      <DependentUpon>parqueadero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="view\verlavado.resx">
+      <DependentUpon>verlavado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\verparquea.resx">
+      <DependentUpon>verparquea.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out-icon-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter_icon-icons.com_48306.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pO3OY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
